@@ -32,7 +32,7 @@ function ChatArea() {
     };
     axios
       .post(
-        "http://localhost:8080/message/",
+        "https://live-chat-server-api.vercel.app/message/",
         {
           content: messageContent,
           chatId: chat_id,
@@ -55,7 +55,7 @@ function ChatArea() {
       },
     };
     axios
-      .get("http://localhost:8080/message/" + chat_id, config)
+      .get("https://live-chat-server-api.vercel.app/message/" + chat_id, config)
       .then(({ data }) => {
         setAllMessages(data);
         setloaded(true);
@@ -141,7 +141,7 @@ function ChatArea() {
               setMessageContent(e.target.value);
             }}
             onKeyDown={(event) => {
-              if (event.code == "Enter") {
+              if (event.code === "Enter") {
                 // console.log(event);
                 sendMessage();
                 setMessageContent("");

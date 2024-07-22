@@ -30,7 +30,7 @@ function Login() {
       };
 
       const response = await axios.post(
-        "http://localhost:8080/user/login/",
+        "https://live-chat-server-api.vercel.app/user/login/",
         data,
         config
       );
@@ -58,7 +58,7 @@ function Login() {
       };
 
       const response = await axios.post(
-        "http://localhost:8080/user/register/",
+        "https://live-chat-server-api.vercel.app/user/register/",
         data,
         config
       );
@@ -108,7 +108,7 @@ function Login() {
               color="secondary"
               name="name"
               onKeyDown={(event) => {
-                if (event.code == "Enter") {
+                if (event.code === "Enter") {
                   // console.log(event);
                   loginHandler();
                 }
@@ -123,7 +123,7 @@ function Login() {
               color="secondary"
               name="password"
               onKeyDown={(event) => {
-                if (event.code == "Enter") {
+                if (event.code === "Enter") {
                   // console.log(event);
                   loginHandler();
                 }
@@ -165,7 +165,7 @@ function Login() {
               name="name"
               helperText=""
               onKeyDown={(event) => {
-                if (event.code == "Enter") {
+                if (event.code === "Enter") {
                   // console.log(event);
                   signUpHandler();
                 }
@@ -179,7 +179,7 @@ function Login() {
               color="secondary"
               name="email"
               onKeyDown={(event) => {
-                if (event.code == "Enter") {
+                if (event.code === "Enter") {
                   // console.log(event);
                   signUpHandler();
                 }
@@ -194,7 +194,7 @@ function Login() {
               color="secondary"
               name="password"
               onKeyDown={(event) => {
-                if (event.code == "Enter") {
+                if (event.code === "Enter") {
                   // console.log(event);
                   signUpHandler();
                 }
